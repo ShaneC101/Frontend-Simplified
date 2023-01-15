@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: black;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact__us {
+    border: 2px solid yellow;
+    background-color: yellow;
+    border-radius: 37px; 
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.contact__btn {
+    color:aquamarine;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact__us:hover {
+    color: aliceblue;
+    background-color: blueviolet;
+    transition: all 300ms ease ;
+}
