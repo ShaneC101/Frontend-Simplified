@@ -24,6 +24,12 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+
 .flex {
     display: flex;
 }
@@ -97,6 +103,12 @@ nav {
 .about-me__info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 .about-me__info--container {
     display: flex;
