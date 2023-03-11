@@ -142,6 +142,7 @@ nav {
 
 /* ABOUT ME */
 
+
 #about-me {
     min-height: 100vh;
     display: flex;
@@ -151,18 +152,15 @@ nav {
 .about-me__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.about-me__info--container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-}
-.about-me__info--container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .about-me__picture-mask {
@@ -172,6 +170,19 @@ nav {
     overflow: hidden;
     box-shadow: 0 8px 16px rgba( 0, 0, 0, 16);
     margin-bottom: 28px;
+    animation: animate-profile-picture 800ms 200ms backwards;
+}
+
+@keyframes animate-profile-picture {
+0% {
+    transform: scale(0);
+}
+80% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+}
 }
 
 .about-me__picture {
@@ -180,12 +191,44 @@ nav {
     padding: 0px;
     box-shadow: 0 8px 16px rgba( 0, 0, 0, 16);
 }
+.about-me__picture {
+    width: 40%;
+
+/* Improving my own picture */
+transform: scale(1.5);
+padding-top: 8px;
+}
+
+
+.about_me__info--title {
+    margin-bottom: 16px;
+    animation: fade-up 650ms 400ms backwards; 
+}
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
+    animation: fade-up 650ms 600ms backwards;
+}
 
 .about-me__link {
     font-size: 20px;
     color: black;
     padding: 0 16px;
 }
+.about-me__links {
+    animation: fade=up 650ms 800ms backwards;
+}
+
+
+@keyframes fade-up {
+    0% {
+    opacity: 0;
+    transform: translateY(40px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}}
 
 .about-me__img--container {
     flex: 1;
@@ -194,12 +237,20 @@ nav {
 }
 .about-me__img {
     width: 100%;
-    padding-top: 64px;
+    animation: fade-in 1200ms 800ms backwards;
     
 }
-.about-me__para {
-    padding-bottom: 10px;
+
+@keyframes fade-in {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
 }
+
+
 
 /* TECH - STACK */
    
@@ -228,10 +279,12 @@ transform: scale(0.9);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px 16px;
 }
 
 .language__list {
     display: flex;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -316,12 +369,13 @@ transform: scale(0.9);
  }
 
 .project__description--para {
-    margin: 16px;
+    margin: 16px 0;
 }
 
 .project__description--link {
     font-size: 20px;
     margin-right: 16px;
+    text-decoration: none;
 }
 
  .project__description--title,
@@ -419,8 +473,13 @@ h1 {
 /* SMALL PHONES */
 @media (max-width: 480px) {
     .nav__link:not(:last-child) {
-    display: none;
-    }
+        display: none;
+}
+
+.project__description {
+    padding: 0;
+    left: 0;
+    width: 100%;
 }
 
 .project__description--para {
@@ -431,3 +490,14 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.project__description--title {
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+}
+
+.project__description--sub-title {
+    text-align: center;
+    margin: 12px 0;
+}}
