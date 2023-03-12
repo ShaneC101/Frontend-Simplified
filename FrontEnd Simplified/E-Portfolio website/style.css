@@ -28,8 +28,11 @@ font-size: 16px;
 a {
 text-decoration: none;
 position: relative;
+transition: opacity 300ms ease;
 }
-
+i:hover {
+    opacity: 0.7;
+}
 .link__hover-effect:after {
     content: "";
     position: absolute;
@@ -186,21 +189,26 @@ nav {
 }
 
 .about-me__picture {
-    width: 90px;
-    border-radius: 24px;
-    padding: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
     box-shadow: 0 8px 16px rgba( 0, 0, 0, 16);
+    margin-bottom: 38px;
+    animation: fade-in 650ms 400ms backwards; 
 }
+.about-me__picture--mask {
+    width: 20%; }
+    
 .about-me__picture {
-    width: 40%;
+    width: 100%;
 
-/* Improving my own picture */
+/* Improving my own picture */ 
 transform: scale(1.5);
 padding-top: 8px;
 }
 
-
-.about_me__info--title {
+.about-me__info--title {
     margin-bottom: 16px;
     animation: fade-up 650ms 400ms backwards; 
 }
@@ -214,11 +222,10 @@ padding-top: 8px;
     font-size: 20px;
     color: black;
     padding: 0 16px;
-}
+    }
 .about-me__links {
-    animation: fade=up 650ms 800ms backwards;
+    animation: fade-up 650ms 800ms backwards;
 }
-
 
 @keyframes fade-up {
     0% {
@@ -228,7 +235,8 @@ padding-top: 8px;
 100% {
     opacity: 1;
     transform: translateY(0);
-}}
+}
+}
 
 .about-me__img--container {
     flex: 1;
@@ -238,7 +246,6 @@ padding-top: 8px;
 .about-me__img {
     width: 100%;
     animation: fade-in 1200ms 800ms backwards;
-    
 }
 
 @keyframes fade-in {
@@ -249,6 +256,20 @@ padding-top: 8px;
     opacity: 1;
     }
 }
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    } 50%{
+transform: rotate(30deg); 
+}
+100% {
+    transform: rotate(0);
+}
+    }
 
 
 
@@ -446,8 +467,8 @@ margin-bottom: 28px;
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
   nav {
-    height: 68px;}
-  }
+    height: 68px;
+}
 
 h1 {
     font-size: 28px;
@@ -470,10 +491,11 @@ h1 {
     padding-right: 30px;
 }
 
+}
 /* SMALL PHONES */
-@media (max-width: 480px) {
+@media (max-width: 480px) {    
     .nav__link:not(:last-child) {
-        display: none;
+    display: none;
 }
 
 .project__description {
@@ -485,8 +507,7 @@ h1 {
 .project__description--para {
     display: none;
 }
-
-.project__description--links {
+    .project__description--links {
     display: flex;
     justify-content: center;
 }
@@ -500,4 +521,5 @@ h1 {
 .project__description--sub-title {
     text-align: center;
     margin: 12px 0;
-}}
+}
+}
