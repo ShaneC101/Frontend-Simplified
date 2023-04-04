@@ -1,3 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+* {
+font-family: 'Lato', sans-serif;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+color: #242424;
+text-align: center;
+line-height: 1.25;
+}
+
+h1 {
+font-size: 36px;
+}
+
+p {
+line-height: 1.5;
+font-size: 16px;
+}
+
+a {
+text-decoration: none;
+position: relative;
+transition: opacity 300ms ease;
+}
+i:hover {
+    opacity: 0.7;
+}
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+}
+
+.link__hover-effect--black:after {
+    background-color: #000;
+}
+
+.link__hover-effect:hover:after {
+    width: 100%;
+    left:0;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+    
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.container {
+    padding: 50px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px
+}
+
+.text--blue {
+    color: cyan;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.nav__link--list {
+    display: flex;
+}
+
+.nav__link--anchor {
+    margin: 12px;
+    color: #242424;
+    font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+    background-color: cyan;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: rgb(86, 84, 84);
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+    box-shadow: 0 0 5px rgb(18, 171, 171), 0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+
+.personal__logo {
+    font-size: 24px;
+    color: cyan;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
 
 * {
     background-color: black;
@@ -8,76 +145,10 @@
 .img {
     width: 800px;
     background-color: black;
-    margin-left: 440px;
+    margin-left: 470px;
     
 }
 
-.subscribe-button {
-    background-color: rgb(210, 9, 9);
-    color: white;
-    border: none;
-    height: 36px;
-    width: 105px;
-    border-radius: 2px;
-    cursor: pointer;
-    margin-right: 8px;
-    transition: opacity 300ms ease;
-}
- 
-.subscribe-button:hover {
-    opacity: 0.8;
-}
- 
-.subscribe-button:active {
-    opacity: 0.5;
-}
-
-.join-button {
-    background-color: white;
-    border-color: rgb(41, 118, 211);
-    border-style: solid;
-    border-width: 1px;
-    color: rgb(41, 118, 211);
-    height: 36px;
-    width: 62px;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: background-color 0.15s,
-    color 0.15s;
-}
-
-.join-button:hover {
-    background-color: rgb(41, 118, 211);
-    color: white;
-}
-
-.join-button:active {
-    opacity: 0.5;
-}
-
-
-
-.tweet-button {
-    background-color: rgb(20, 127, 242);
-    border: none;
-    height: 36px;
-    width: 84px;
-    color: white;
-    border-radius: 18px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 8px;
-    transition: box-shadow 0.15s;
-   
-}
-
-.tweet-button:hover {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-}
-.tweet-button:active {
-    opacity: 0.5;
-}
 
 .browse-button {
     color: rgb(86, 84, 84);
@@ -85,7 +156,7 @@
     width: 105px;
     border: none;
     border-radius: 2px;
-    margin-left: 8px;
+    margin-left: 8px;  
     transition: 0.5s;
     background-color: cyan;
     box-shadow: 0 0 5px cyan,
