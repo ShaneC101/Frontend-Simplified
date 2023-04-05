@@ -16,6 +16,10 @@ text-align: center;
 line-height: 1.25;
 }
 
+h2 {
+    color: cyan;
+}
+
 h1 {
 font-size: 36px;
 }
@@ -303,7 +307,7 @@ nav {
 
 /* FEATURES */
 
-    .photos {
+   .photos {
     display: flex;
     flex-wrap: wrap;
     }
@@ -317,7 +321,7 @@ nav {
     .photo__img {
         max-height: 380px;
         transition: all 300ms ease;
-        cursor: no-drop;
+        cursor: pointer;
     }
 
     .photo__img--wrapper {
@@ -327,18 +331,19 @@ nav {
         display: flex;
     }
 
-    .photo:hover .book__img {
+    .photo:hover .photo__img {
         transform: scale(1.03);
     }
 
     .photo__title {
         font-size: 20px;
         margin-bottom: 8px;
+        color: #bfbfbf;
     }
 
     .photo__title:hover {
         text-decoration: underline;
-        cursor: not-allowed;
+        cursor: pointer
     }
 
     .photo__ratings {
@@ -351,3 +356,4 @@ nav {
         padding-right: 6px;
         color: #bfbfbf;
     }
+   
