@@ -300,3 +300,54 @@ nav {
 .browse-button:active {
     opacity: 0.5;
 }
+
+/* FEATURES */
+
+    .photos {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .photo {
+    width: 50%;
+    padding: 24px; 
+   
+}
+
+    .photo__img {
+        max-height: 380px;
+        transition: all 300ms ease;
+        cursor: no-drop;
+    }
+
+    .photo__img--wrapper {
+        margin-bottom: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .photo:hover .book__img {
+        transform: scale(1.03);
+    }
+
+    .photo__title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .photo__title:hover {
+        text-decoration: underline;
+        cursor: not-allowed;
+    }
+
+    .photo__ratings {
+        margin-bottom: 8px;
+        color: #fabf2a;
+    }
+
+    .photo__price--normal {
+        text-decoration: line-through;
+        padding-right: 6px;
+        color: #bfbfbf;
+    }
